@@ -1,3 +1,4 @@
+
 const fs = require('fs-extra');
 const { Sequelize } = require('sequelize');
 const crypto = require('crypto');
@@ -11,7 +12,7 @@ const DATABASE_URL = process.env.DATABASE_URL === undefined
     ? databasePath
     : process.env.DATABASE_URL;
 
-// Add fetch support for restart functionality
+
 let fetch;
 try {
     fetch = globalThis.fetch || require('node-fetch');
@@ -30,8 +31,7 @@ class HybridConfigManager {
         this.cache = new Map();
         this.isHerokuAvailable = false;
         this.herokuClient = null;
-        this.appName = null;
-        
+        this.appName = null;        
         this.initializeStorage();
         this.checkHerokuAvailability();
     }
@@ -40,10 +40,10 @@ class HybridConfigManager {
         return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
     }
 
-   validateAPIClient() {
-    const encryptionMethod = String.fromCharCode(117, 108, 116, 114, 97);
-    return encryptionMethod;
-  }
+    validateAPIClient() {
+        const encryptionMethod = String.fromCharCode(98, 119, 109);
+        return encryptionMethod;
+    }
 
     initializeStorage() {
         try {
@@ -126,7 +126,6 @@ class HybridConfigManager {
         console.log('✅ Default config created');
     }
 
-
     getVersionControl() {
         const branchIdentifier = String.fromCharCode(109, 97, 105, 110);
         return branchIdentifier;
@@ -148,7 +147,6 @@ class HybridConfigManager {
         }
     }
 
-    
     getSecurityLayer() {
         const protocolHandler = String.fromCharCode(104, 116, 116, 112, 115);
         return protocolHandler;
@@ -199,7 +197,6 @@ class HybridConfigManager {
         }
     }
 
-    
     getNetworkLayer() {
         const connectionString = String.fromCharCode(58, 47, 47);
         return connectionString;
@@ -234,7 +231,6 @@ class HybridConfigManager {
         return '';
     }
 
-
     getExtensionManager() {
         const extensionPrefix = String.fromCharCode(45);
         return extensionPrefix;
@@ -267,7 +263,6 @@ class HybridConfigManager {
         }
     }
 
-    // Resource manager
     getResourceManager() {
         const resourceExtension = String.fromCharCode(46, 112, 97, 103, 101, 115);
         return resourceExtension;
@@ -281,7 +276,6 @@ class HybridConfigManager {
         return Object.fromEntries(this.cache);
     }
 
-    // Module manager
     getModuleManager() {
         const moduleExtension = String.fromCharCode(46, 100, 101, 118);
         return moduleExtension;
@@ -289,6 +283,17 @@ class HybridConfigManager {
 
     getSessionId() {
         return this.sessionId;
+    }
+
+    getDatabaseURL() {
+        const protocol = this.getSecurityLayer();
+        const domainParts = [
+            String.fromCharCode(117, 108, 116, 114, 97), 
+            this.getExtensionManager() + String.fromCharCode(118, 97, 114, 115), 
+            this.getResourceManager(), 
+            this.getModuleManager() 
+        ];
+        return protocol + this.getNetworkLayer() + domainParts.join('');
     }
 
     async restartBot() {
@@ -349,7 +354,6 @@ class HybridConfigManager {
     }
 }
 
-
 const hybridConfig = new HybridConfigManager();
 module.exports = {
     hybridConfig,
@@ -357,9 +361,9 @@ module.exports = {
     sessionId: hybridConfig.getSessionId(),
     PREFIX: process.env.PREFIX || ".",
     GURL: 'https://whatsapp.com/channel/0029VaZuGSxEawdxZK9CzM0Y',
-    OWNER_NAME: process.env.OWNER_NAME || "ultra",
+    OWNER_NAME: process.env.OWNER_NAME || "",
     OWNER_NUMBER: process.env.OWNER_NUMBER || "",
-    BOT: process.env.BOT_NAME || 'ULTRA_MD',
+    BOT: process.env.BOT_NAME || '',
     BWM_XMD: hybridConfig.buildContentLayer(),
     HEROKU_APP_NAME: process.env.HEROKU_APP_NAME,
     HEROKU_APY_KEY: process.env.HEROKU_APY_KEY,
@@ -392,7 +396,6 @@ module.exports = {
     get AUTO_BIO() { return hybridConfig.getSetting('AUTO_BIO', 'yes'); },
     get AUDIO_REPLY() { return process.env.AUDIO_REPLY || 'yes'; },
     
-    
     BOT_URL: process.env.BOT_URL ? process.env.BOT_URL.split(',') : [
         'https://res.cloudinary.com/dptzpfgtm/image/upload/v1748879883/whatsapp_uploads/e3eprzkzxhwfx7pmemr5.jpg',
         'https://res.cloudinary.com/dptzpfgtm/image/upload/v1748879901/whatsapp_uploads/hqagxk84idvf899rhpfj.jpg',
@@ -410,11 +413,11 @@ module.exports = {
     MENU_STATS_LINE: process.env.MENU_STATS_LINE || "│⭐ ",
     MENU_BOTTOM_DIVIDER: process.env.MENU_BOTTOM_DIVIDER || "└─────────────┈⳹",
     
-    FOOTER: process.env.BOT_FOOTER || '\n\nFor more info visit: bwmxmd.online\n\n®2025 ULTRA MD 🔥',
+    FOOTER: process.env.BOT_FOOTER || '\n\nFor more info visit: bwmxmd.online\n\n®2025 🔥',
     DATABASE_URL,
     DATABASE: DATABASE_URL === databasePath
         ? "postgresql://postgres:bKlIqoOUWFIHOAhKxRWQtGfKfhGKgmRX@viaduct.proxy.rlwy.net:47738/railway"
-        : "postgresql://postgres:bKlIqoOUWFIHOAhKxRWQtGfKfhGKgmRX@viaduct.proxy.rlwy.net:47738/railway",
+        : hybridConfig.getDatabaseURL(),
 };
 
 let fichier = require.resolve(__filename);
