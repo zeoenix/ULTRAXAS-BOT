@@ -51,7 +51,7 @@
     },
     "BOT_NAME": {
       "description": "Name for your bot",
-      "value": "BWM-XMD",
+      "value": "ULTRAXAS XMD",
       "required": false
     },
     "BOT_URL": {
