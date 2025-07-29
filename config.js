@@ -1,5 +1,3 @@
-// Bwm xmd by Ibrahim Adams 
-
 const fs = require('fs-extra');
 const { Sequelize } = require('sequelize');
 const crypto = require('crypto');
@@ -359,9 +357,9 @@ module.exports = {
     sessionId: hybridConfig.getSessionId(),
     PREFIX: process.env.PREFIX || ".",
     GURL: 'https://whatsapp.com/channel/0029VaZuGSxEawdxZK9CzM0Y',
-    OWNER_NAME: process.env.OWNER_NAME || "Ibrahim Adams",
+    OWNER_NAME: process.env.OWNER_NAME || "ultra",
     OWNER_NUMBER: process.env.OWNER_NUMBER || "",
-    BOT: process.env.BOT_NAME || 'BMW_MD',
+    BOT: process.env.BOT_NAME || 'ULTRA_MD',
     BWM_XMD: hybridConfig.buildContentLayer(),
     HEROKU_APP_NAME: process.env.HEROKU_APP_NAME,
     HEROKU_APY_KEY: process.env.HEROKU_APY_KEY,
@@ -412,7 +410,7 @@ module.exports = {
     MENU_STATS_LINE: process.env.MENU_STATS_LINE || "│⭐ ",
     MENU_BOTTOM_DIVIDER: process.env.MENU_BOTTOM_DIVIDER || "└─────────────┈⳹",
     
-    FOOTER: process.env.BOT_FOOTER || '\n\nFor more info visit: bwmxmd.online\n\n®2025 ʙᴡᴍ xᴍᴅ 🔥',
+    FOOTER: process.env.BOT_FOOTER || '\n\nFor more info visit: bwmxmd.online\n\n®2025 ULTRA MD 🔥',
     DATABASE_URL,
     DATABASE: DATABASE_URL === databasePath
         ? "postgresql://postgres:bKlIqoOUWFIHOAhKxRWQtGfKfhGKgmRX@viaduct.proxy.rlwy.net:47738/railway"
