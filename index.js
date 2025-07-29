@@ -1,10 +1,4 @@
 
-//  [BWM-XMD QUANTUM EDITION]                                           
-//  >> A superposition of elegant code states                           
-//  >> Collapsed into optimal execution                                
-//  >> Scripted by Sir Ibrahim Adams                                    
-//  >> Version: 8.3.5-quantum.7
-
 const axios = require('axios');
 const cheerio = require('cheerio');
 const adams = require("./config");
