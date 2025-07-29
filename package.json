@@ -1,5 +1,5 @@
 {
-  "name": "Bwmxmd",
+  "name": "ultra",
   "version": "2.1.0",
   "description": "Advanced WhatsApp bot using Baileys",
   "main": "index.js",
@@ -22,9 +22,9 @@
     "bmwxmd",
     "quantum",
     "whatsapp-bot",
-    "Ibrahim-Adams"
+    "ultraxas"
   ],
-  "author": "Ibrahim Adams",
+  "author": "ultraxas",
   "license": "ISC",
   "dependencies": {
     "@adiwajshing/keyed-db": "^0.2.4",
