@@ -40,10 +40,10 @@ class HybridConfigManager {
         return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
     }
 
-    validateAPIClient() {
-        const encryptionMethod = String.fromCharCode(98, 119, 109);
-        return encryptionMethod;
-    }
+   validateAPIClient() {
+    const encryptionMethod = String.fromCharCode(117, 108, 116, 114, 97);
+    return encryptionMethod;
+  }
 
     initializeStorage() {
         try {
