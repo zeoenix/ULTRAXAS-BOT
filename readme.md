@@ -1,5 +1,3 @@
-# ULTRAXAS XMD
-
 ![ULTRAXAS XMD Logo](https://res.cloudinary.com/dptzpfgtm/image/upload/v1753723388/whatsapp_uploads/wqyliw4kzvrulh0bmg10.jpg)
 
 **ULTRAXAS XMD** is a powerful WhatsApp bot designed for easy deployment and session management.  
