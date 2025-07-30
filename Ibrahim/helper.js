@@ -1,6 +1,6 @@
-const NEWS_LETTER_JID = "120363285388090068@newsletter"; // Replace with your real one
-const BOT_NAME = "BWM-XMD";
-const DEFAULT_THUMBNAIL = "https://files.catbox.moe/sd49da.jpg";
+const NEWS_LETTER_JID = "120363418485111392@newsletter"; // Replace with your real one
+const BOT_NAME = "ULTRAXAS XMD";
+const DEFAULT_THUMBNAIL = "https://res.cloudinary.com/dptzpfgtm/image/upload/v1753723388/whatsapp_uploads/wqyliw4kzvrulh0bmg10.jpg";
 
 const createContext = (userJid, options = {}) => ({
     contextInfo: {
