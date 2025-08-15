@@ -39,14 +39,15 @@ Stay up to date with live stats from the official repo:
 
 ---
 
-## 💬 WhatsApp Channel
-
-Join our official WhatsApp channel for updates, support, and community:  
-[![Join WhatsApp Channel](https://img.shields.io/badge/WhatsApp-Channel-25D366?logo=whatsapp&style=for-the-badge)](https://whatsapp.com/channel/0029Vb6Ob7iKQuJSeAx8s92j)
-
+## ✨ Features:
+- 😱 Auto-Saving Contacts  
+- ✅ Auto Blue Ticking  
+- 🚫 Auto Block Contacts  
+- 🌀 Auto Status Updates  
+- ⚙️ More powerful automation features included!
 ---
 
-## 🌟 Features
+## 🌟 Setup
 
 - One-click deployment
 - Session generation
@@ -54,6 +55,13 @@ Join our official WhatsApp channel for updates, support, and community:
 - Animated loaders
 - Audio notifications
 - Stylish, interactive UI
+
+---
+
+## 💬 WhatsApp Channel
+
+Join our official WhatsApp channel for updates, support, and community:  
+[![Join WhatsApp Channel](https://img.shields.io/badge/WhatsApp-Channel-25D366?logo=whatsapp&style=for-the-badge)](https://whatsapp.com/channel/0029Vb6Ob7iKQuJSeAx8s92j)
 
 ---
 
